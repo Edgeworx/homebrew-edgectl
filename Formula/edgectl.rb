@@ -5,16 +5,16 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "0.3.2"
+  version "0.3.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.2/edgectl-macos-amd64.tar.gz"
-    sha256 "b6b25c20591f155c1ce33516546c409ac43893848dfac98d756e02a6f548a01f"
+    url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.3/edgectl-macos-amd64.tar.gz"
+    sha256 "94984027eecb9b5feb5c03534cd72785de25fc2880cccd8476eba00604320043"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.2/edgectl-linux-amd64.tar.gz"
-    sha256 "0f823c42fa31234ef4001a6e4bc33cb29d8aec35248ce2fbca90ce4d77dcfb80"
+    url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.3/edgectl-linux-amd64.tar.gz"
+    sha256 "a7c314f3e3aff0e08750d1f2feaf665cfc26f4c8652973f48d8c3aeb164e497d"
   end
 
   def install
