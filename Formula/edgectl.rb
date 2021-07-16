@@ -5,28 +5,28 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "0.3.27"
+  version "0.3.28"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.27/edgectl_0.3.27_macos_amd64.tar.gz"
-      sha256 "6e05ccbdf7277cea3347ed4e604df17b49520e6c1fd9ba5cbd72053d4da0a911"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.28/edgectl_0.3.28_macos_amd64.tar.gz"
+      sha256 "fb1c7a3e74e57122222fc96b1412fdbf2d00c2ffaf7dfe532b28315936912453"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.27/edgectl_0.3.27_macos_arm64.tar.gz"
-      sha256 "4c5317cc7bc687ad830258c2237d8ccffa30994333b5e982624020c728f3f83b"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.28/edgectl_0.3.28_macos_arm64.tar.gz"
+      sha256 "652cddca5da9c0e56abf97be3e4cb30eff25d08ffea63030ef82fbca95d9ec29"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.27/edgectl_0.3.27_amd64.tar.gz"
-      sha256 "4ebf4e4fa3ca1542415a5bebb80cf31791910f2f5ae6f33bc9436b51c9582ae6"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.28/edgectl_0.3.28_amd64.tar.gz"
+      sha256 "b16e76f20f086ded30cea76c0b5e931694e664edf1061ea6ff304a3e6762b54b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.27/edgectl_0.3.27_arm64.tar.gz"
-      sha256 "224985f50dd07da68596b84023a0b867f0bd8ac46c4f4684495457ca8748349b"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.3.28/edgectl_0.3.28_arm64.tar.gz"
+      sha256 "9f238d452261ddfafcf9e3787bb54c79ca94d0c678d19b675767b5d5de18cc7a"
     end
   end
 
