@@ -5,32 +5,32 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "0.12.1"
+  version "0.13.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.12.1/edgectl_0.12.1_macos_amd64.tar.gz"
-      sha256 "40e2a6db8f5f1376fb78ec19404b24760d0a2a481167acdfacabd30907e0db60"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.13.0/edgectl_0.13.0_macos_amd64.tar.gz"
+      sha256 "b2de960989a55ac697d65865f16271a39fe814def3991615388bb4d665927479"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.12.1/edgectl_0.12.1_macos_arm64.tar.gz"
-      sha256 "00163f0f2c94244e4f0768580255722e919a2593caf5577ef26a9bc7684f0dbe"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.13.0/edgectl_0.13.0_macos_arm64.tar.gz"
+      sha256 "306c5f9c6b3bb126118abdcfa5696e6e62fd426d1ac33fa7a09c7bd6b7f0e76b"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.12.1/edgectl_0.12.1_arm64.tar.gz"
-      sha256 "bca455de9d75e46407d0d7e1fa507a8ace4eb65e3e2868db0e8a4f9b5512af81"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.13.0/edgectl_0.13.0_arm.tar.gz"
+      sha256 "45d2a2819166ac5aa2d39853cc7ef642a0c3f2cb1b2c74e0a0abdee659b47d4b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.12.1/edgectl_0.12.1_amd64.tar.gz"
-      sha256 "543380402fcf0f86abb3accd2eebe95b05b8d11ea2b4aaba1b184a64e3e773e2"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.13.0/edgectl_0.13.0_amd64.tar.gz"
+      sha256 "9d5e396c729e389891e08de31632bfb6a30a302610fae7dcb5347947b45b03dc"
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.12.1/edgectl_0.12.1_arm.tar.gz"
-      sha256 "77dbab0920b612ac64f3383dd1f59db496ae093bff5d62c701c5b3fd52614908"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.13.0/edgectl_0.13.0_arm64.tar.gz"
+      sha256 "450b09e45d8978b579a64492b32bfe7b7cf726cd71ac3d957c2e097fbc4052ec"
     end
   end
 
