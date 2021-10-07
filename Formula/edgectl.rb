@@ -5,32 +5,32 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "0.14.0"
+  version "0.15.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.14.0/edgectl_0.14.0_macos_amd64.tar.gz"
-      sha256 "308a35c439d1cc92a4564008dd554540de17bf0e87c5b4b8831c448203484195"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.14.0/edgectl_0.14.0_macos_arm64.tar.gz"
-      sha256 "8be52a7b39a0dbd28c4f9c9eb42a77e5802a5b723b6079f7cb95251d752f3ff1"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.15.0/edgectl_0.15.0_macos_arm64.tar.gz"
+      sha256 "78ffd641213f21dc1aed3cb728a0c4497d6a94c9c4cf153c42c3627297ecbdfc"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.15.0/edgectl_0.15.0_macos_amd64.tar.gz"
+      sha256 "13b32a2db80d5cdaceea95df7793efb51483522a2033ff6be8915f0177893a67"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.14.0/edgectl_0.14.0_arm64.tar.gz"
-      sha256 "f3146c37327e2d8f22e4e5515ebb973deed981e02a01d5ea59f7b480c210ec3f"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.15.0/edgectl_0.15.0_arm64.tar.gz"
+      sha256 "420a67f5dfa6db187d3f2e69b7bb9d8d33667cea9cf4fce259c5fbc4857e552b"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.14.0/edgectl_0.14.0_arm.tar.gz"
-      sha256 "2c23126c7cfb26c471bf500fecce1d3a75ed108869b0644ded82a491e90a58c4"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.15.0/edgectl_0.15.0_arm.tar.gz"
+      sha256 "771370f7267b5c90466c9fa6e58e61a6469d7eb504d1619d1b3c7787691b2a44"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.14.0/edgectl_0.14.0_amd64.tar.gz"
-      sha256 "5fa372aec80876bd029fc4afcddc9498b8bc19c44adc762d07ed356e6392b839"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v0.15.0/edgectl_0.15.0_amd64.tar.gz"
+      sha256 "ecc23d65add6c1c084dfc76266656253d88e67a7a7d8519013ef7db2a997dd99"
     end
   end
 
