@@ -5,20 +5,20 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "1.1.5"
+  version "1.1.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.5/edgectl_1.1.5_macos_amd64.tar.gz"
-      sha256 "d5a5508657cf8a39940460e38642552bdc1ad00abbda1180fe895286eefae23f"
+    if Hardware::CPU.arm?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.6/edgectl_1.1.6_macos_arm64.tar.gz"
+      sha256 "1d20a79a23d03df17b6ca2f6eddd6ebc0d827a8478d3caf0087a1c03401c8f78"
 
       def install
         bin.install "edgectl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.5/edgectl_1.1.5_macos_arm64.tar.gz"
-      sha256 "422247e8dcf977c7ac92e27487e693d4d4a607def3a4628479156973d3823411"
+    if Hardware::CPU.intel?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.6/edgectl_1.1.6_macos_amd64.tar.gz"
+      sha256 "8a21422172ac3d5a2de4975d0e490a3723f0df256ebda2508d7d193177b67d3e"
 
       def install
         bin.install "edgectl"
@@ -27,25 +27,25 @@ class Edgectl < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.6/edgectl_1.1.6_amd64.tar.gz"
+      sha256 "fa694847789078520f09b69efc0a436dc85b259fa1b7fd27eea4d135e926efb5"
+
+      def install
+        bin.install "edgectl"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.5/edgectl_1.1.5_armv6.tar.gz"
-      sha256 "b0199921e973180d09c7f6c93cb37c5a9c2df79754b8e4e5d23dc975940c6ee0"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.6/edgectl_1.1.6_armv6.tar.gz"
+      sha256 "eb65d5a4fe1ef4e3396aeaa50877543e6ae08c7ab2b1b51767c405d9b230e75c"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.5/edgectl_1.1.5_arm64.tar.gz"
-      sha256 "f42572cd732eeb2dc31a4bcab9aa029559434def8e58acc81fc784365a5910c8"
-
-      def install
-        bin.install "edgectl"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.5/edgectl_1.1.5_amd64.tar.gz"
-      sha256 "6a9c716fe10aa0bd8311c50b64ec8f5a914805661122385378dac089269794e4"
+      url "https://github.com/Edgeworx/homebrew-edgectl/releases/download/v1.1.6/edgectl_1.1.6_arm64.tar.gz"
+      sha256 "e3a58dc95cf2e7bd6162aa87a0738df367e3bc4d463b0d1ef82b0b856d9a2e04"
 
       def install
         bin.install "edgectl"
