@@ -5,20 +5,20 @@
 class Edgectl < Formula
   desc "CLI for Darcy Cloud"
   homepage "https://cloud.darcy.ai"
-  version "2.1.12"
+  version "2.1.13"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.12/edgectl_2.1.12_macos_arm64.tar.gz"
-      sha256 "019cf3e0877cc17e762c8cd175ff1d6c1cfcd6ae6aeaffe0868ff6672e460ebe"
+    if Hardware::CPU.intel?
+      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.13/edgectl_2.1.13_macos_amd64.tar.gz"
+      sha256 "d0992778879709acf99806e461daa1bb7ec05f6fe138f09b322f513b45d9d57f"
 
       def install
         bin.install "edgectl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.12/edgectl_2.1.12_macos_amd64.tar.gz"
-      sha256 "f6adc0beb131df734d94c5415ce87a3df0bde07cab23b7e7b9d7215dcd6075dd"
+    if Hardware::CPU.arm?
+      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.13/edgectl_2.1.13_macos_arm64.tar.gz"
+      sha256 "48c449a399c072b10bef91412da92e7069e3cb642339d43ff42bd25e4cbcfa99"
 
       def install
         bin.install "edgectl"
@@ -27,25 +27,25 @@ class Edgectl < Formula
   end
 
   on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.13/edgectl_2.1.13_amd64.tar.gz"
+      sha256 "aa271c4ff2dfff49f2f2c9fbccd20fdc33b2753eb33197393ae3374d69b3e82e"
+
+      def install
+        bin.install "edgectl"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.12/edgectl_2.1.12_armv6.tar.gz"
-      sha256 "95144ade3b4516bf75b3c13646d135f51048b32ef807f0d1b174cb803531b8b7"
+      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.13/edgectl_2.1.13_armv6.tar.gz"
+      sha256 "a623b64e8d83f488c33836ec2a72972f857289a8f3c7dd96c30dd33873d43cfe"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.12/edgectl_2.1.12_arm64.tar.gz"
-      sha256 "fd09b4784bb9cb7a25429edb5135d6a313320c510c200948e50e988ce7c67036"
-
-      def install
-        bin.install "edgectl"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.12/edgectl_2.1.12_amd64.tar.gz"
-      sha256 "82bacb2a06d51bf20ba5a0f037fb452f6de6b2eb9dc5ac4a5208ee1179e46ce8"
+      url "https://github.com/edgeworx/edgectl/releases/download/v2.1.13/edgectl_2.1.13_arm64.tar.gz"
+      sha256 "0d3ba04486072ceb431519b74ac6ed533a86670d9c5eb1fbfbd0967ef7ac9391"
 
       def install
         bin.install "edgectl"
