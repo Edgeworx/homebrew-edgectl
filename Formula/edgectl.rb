@@ -5,12 +5,12 @@
 class Edgectl < Formula
   desc "CLI for Darcy Cloud"
   homepage "https://cloud.darcy.ai"
-  version "3.0.0-rc1"
+  version "3.0.0-beta4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-rc1/edgectl_3.0.0-rc1_macos_amd64.tar.gz"
-      sha256 "b9cde5d0c84b2392cc170c79c3b26e38e20159075235dddc234b2710c32de3bc"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-beta4/edgectl_3.0.0-beta4_macos_amd64.tar.gz"
+      sha256 "4c06e317c8d3a9eacf2c0ec50cd96d65ca2802b147e161aa45fcd1fa0931c665"
 
       def install
         bin.install "edgectl"
@@ -19,25 +19,25 @@ class Edgectl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-rc1/edgectl_3.0.0-rc1_armv6.tar.gz"
-      sha256 "b984d65a26c75941ac11f860799adf1aace17a1c39684d167c281cbf4918d228"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-beta4/edgectl_3.0.0-beta4_arm64.tar.gz"
+      sha256 "c4eff284251abde77e868b994e99264a9f774a320e3f025b40a409f098138b07"
 
       def install
         bin.install "edgectl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-rc1/edgectl_3.0.0-rc1_arm64.tar.gz"
-      sha256 "860f404de7027ffb737cbdb7c4a600aed06a74cd82152d00a852ec528f990a71"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-beta4/edgectl_3.0.0-beta4_armv6.tar.gz"
+      sha256 "ef39ba9fcad645a3e0dc7e2209b557aeb54da6a811ea33462ba1e90544123890"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-rc1/edgectl_3.0.0-rc1_amd64.tar.gz"
-      sha256 "0fc066f3e5c0940d847e6c4bb69306c8f7e7134f17e8d5e9a6397e39a77ebb9b"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.0-beta4/edgectl_3.0.0-beta4_amd64.tar.gz"
+      sha256 "511387df738f6459937ee56c1b10f2f2b28e5e6c48e2713402ccd9f1934d9f35"
 
       def install
         bin.install "edgectl"
