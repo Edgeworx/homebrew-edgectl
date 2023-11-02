@@ -5,20 +5,20 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "3.0.4"
+  version "3.0.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.4/edgectl_3.0.4_darwin_amd64.tar.gz"
-      sha256 "dcc15cb8e3b95c312575567c7f1f0ce7a0423ee46dc40463b3f3606cf0b8a9f0"
+    if Hardware::CPU.arm?
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_darwin_arm64.tar.gz"
+      sha256 "01f372dceea06920a56bee6ece03389bee36f89cef4bb5fed2d576bb77e83549"
 
       def install
         bin.install "edgectl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.4/edgectl_3.0.4_darwin_arm64.tar.gz"
-      sha256 "03fecb1c020fc809b7dd9792b6cb1f56110fe052abf49a87755d17f5e86e675a"
+    if Hardware::CPU.intel?
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_darwin_amd64.tar.gz"
+      sha256 "db52bfe30262bcaff5f5d92d741fb8fc2766ea6112d4480b1a85b584deea03d8"
 
       def install
         bin.install "edgectl"
@@ -27,25 +27,17 @@ class Edgectl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.4/edgectl_3.0.4_armv6.tar.gz"
-      sha256 "f3af7b4e1025ea03433058ee6fc426e7b3a34486a58189c0de1191da738dc8e8"
-
-      def install
-        bin.install "edgectl"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.4/edgectl_3.0.4_arm64.tar.gz"
-      sha256 "f00b39f430e8c0c58374c68bef35f43f498008f9954be7a6f376ed3e31da70de"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_arm64.tar.gz"
+      sha256 "8c98078bc7641ccbaae5484c9a55cdaa80436e0a19f80b7676180bf114dc8ba6"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.4/edgectl_3.0.4_amd64.tar.gz"
-      sha256 "dfa1ac2a05df1e93b3e2cc04852b5e3428f78ec32b883bfcb85ce89b780868a3"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_amd64.tar.gz"
+      sha256 "20f125ed970a80adad2d1b7f3b96d1d4728bae68d1b465e1c91ed46b9f8ea27b"
 
       def install
         bin.install "edgectl"
