@@ -5,20 +5,20 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "3.0.7"
+  version "3.0.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_darwin_arm64.tar.gz"
-      sha256 "01f372dceea06920a56bee6ece03389bee36f89cef4bb5fed2d576bb77e83549"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_darwin_arm64.tar.gz"
+      sha256 "44d9a297816a309ded4ed6b6316eec297aedd84c8944506334623f116e153e92"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_darwin_amd64.tar.gz"
-      sha256 "db52bfe30262bcaff5f5d92d741fb8fc2766ea6112d4480b1a85b584deea03d8"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_darwin_amd64.tar.gz"
+      sha256 "8eb91145a5acd1dd309ecc5dd4cb0148d52a41ce5471650af47e10024ff463f0"
 
       def install
         bin.install "edgectl"
@@ -28,16 +28,16 @@ class Edgectl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_arm64.tar.gz"
-      sha256 "8c98078bc7641ccbaae5484c9a55cdaa80436e0a19f80b7676180bf114dc8ba6"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_arm64.tar.gz"
+      sha256 "8075a8da09bff91de66e6b8f863d49d76d01b40be9152754f480f58f46515184"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.7/edgectl_3.0.7_amd64.tar.gz"
-      sha256 "20f125ed970a80adad2d1b7f3b96d1d4728bae68d1b465e1c91ed46b9f8ea27b"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_amd64.tar.gz"
+      sha256 "981bd3f85aaf2f66b5a466bebd48b5d9fb5ff31a934f2bfb2f945100fb9ce316"
 
       def install
         bin.install "edgectl"
