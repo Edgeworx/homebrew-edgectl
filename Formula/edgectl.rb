@@ -5,20 +5,20 @@
 class Edgectl < Formula
   desc "CLI for Edgeworx Cloud"
   homepage "https://cloud.edgeworx.io"
-  version "3.0.9"
+  version "3.0.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_darwin_arm64.tar.gz"
-      sha256 "44d9a297816a309ded4ed6b6316eec297aedd84c8944506334623f116e153e92"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.10/edgectl_3.0.10_darwin_arm64.tar.gz"
+      sha256 "bb32a87b482ab22834aa9f3a62716f0214f1517e36e2b3b6ebe34773cd4a7e1d"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_darwin_amd64.tar.gz"
-      sha256 "8eb91145a5acd1dd309ecc5dd4cb0148d52a41ce5471650af47e10024ff463f0"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.10/edgectl_3.0.10_darwin_amd64.tar.gz"
+      sha256 "805af814d1af9bc04ab6908099b19ac364dd4b388bb8b1b4a67e8762105c4bad"
 
       def install
         bin.install "edgectl"
@@ -28,16 +28,16 @@ class Edgectl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_arm64.tar.gz"
-      sha256 "8075a8da09bff91de66e6b8f863d49d76d01b40be9152754f480f58f46515184"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.10/edgectl_3.0.10_arm64.tar.gz"
+      sha256 "352c01729d26dbe7dbda721b7ca8aff55d96b5c21f6a326402c7d0e56eb75b00"
 
       def install
         bin.install "edgectl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.9/edgectl_3.0.9_amd64.tar.gz"
-      sha256 "981bd3f85aaf2f66b5a466bebd48b5d9fb5ff31a934f2bfb2f945100fb9ce316"
+      url "https://github.com/edgeworx/edgectl/releases/download/v3.0.10/edgectl_3.0.10_amd64.tar.gz"
+      sha256 "3540e3ebb422721daa9abf2973168f1ac354b96461311660c5fa1cfb81874b1a"
 
       def install
         bin.install "edgectl"
